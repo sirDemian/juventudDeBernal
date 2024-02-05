@@ -3,6 +3,10 @@
 
 body {
     margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Dosis', sans-serif;
 }
 
@@ -12,21 +16,28 @@ header {
     justify-content: space-between;
     align-items: center;
     color: whitesmoke;
-    background-color: rgba(228, 20, 20, 0.950);
+    background-color: rgba(228, 20, 20, 0.616);
+    padding: 0;
 }
 
 header img {
     flex: 0; 
     margin: 1em 2em;
-    max-width: 120px;
+    max-width: 100px;
     z-index: 9997;
 }
 
 header h1 {
-    flex: 3; 
+    flex: 1; 
     text-align: center; 
+    padding-right: 4em;
 }
 
+.mainContainer{
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
 /* *************************************** */
 * {
     margin: 0;
@@ -147,31 +158,63 @@ header h1 {
   z-index: 1;
   top: 0;
   right: 0;
+
   
   background-color: rgba(190, 155, 155, 0.80);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 130px;
   color: white;
 }
 
 .sidebar a {
-  padding: 15px 25px;
+  padding: 15px 25px ;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
   transition: 0.3s;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  border-bottom-width: 1px;
 }
+
+.icons {
+  display: flex;
+}
+
 
 .sidebar a:hover {
   color: #f1f1f1;
 }
 
-.content {
-  transition: margin-right 0.5s;
-  padding: 16px;
+
+.sidebarContenido {
+  width: 311px;
 }
+
+
+
+.desplegableInicio {
+  display: block;
+  position:fixed ;
+  padding: 0 0 0 25% ;
+  column-count:auto ;
+  color: #000000;
+  line-height: 10px
+}
+
+.desplegableInicio h4 {
+  font-size: 20px;
+  list-style-type: none ;
+}
+
+.desplegableInicio a {
+  font-size: 15px;
+  border-bottom-style: none;
+  
+}
+
 
 /**********************************************/
 
@@ -186,7 +229,7 @@ p {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: rgba(228, 20, 20, 0.863);;
+    background-color: rgba(228, 20, 20, 0.863);
     color: #fff;
     padding: 1em;
     text-align: right;
@@ -195,11 +238,49 @@ footer {
 .wapBtn{
     width: 3em;
     height: 3em;
-    bottom: 3.5em;
+    bottom: 8em;
     right: 3em;
     position: fixed;
     opacity: 1;
     background: transparent url(../images/whatsapp-logo.png) no-repeat center center;
     background-size: contain;
     z-index: 9998;
+}
+
+.underConstructionContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underConstructionBackground{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.underConstructionContainer div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1em;
+}
+
+.underConstructionImg{
+  max-height: 300px;
+}
+
+.txtUnderConstruction {
+  color: #fff;
+  font-size: xxx-large;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-solidario {
+  margin-top: -2em;
 }
